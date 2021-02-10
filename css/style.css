@@ -671,7 +671,12 @@ textarea::placeholder {
   background-color: inherit;
 }
 
-.checkbox:checked + .checkbox-box {
+.feedback-checkbox:focus + .checkbox-box,
+.feedback-checkbox:hover + .checkbox-box {
+  border: 2px solid var(--accent-color);
+}
+
+.feedback-checkbox:checked + .checkbox-box {
   border: 2px solid transparent;
   background-color: var(--accent-color);
 }
@@ -680,7 +685,7 @@ textarea::placeholder {
   fill: transparent;
 }
 
-.checkbox:checked + * .icon-check-mark {
+.feedback-checkbox:checked + * .icon-check-mark {
   fill: var(--secondary-text-color);
 }
 
